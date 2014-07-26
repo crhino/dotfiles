@@ -1,0 +1,8 @@
+[alias]
+	co = checkout
+	ci = commit
+	br = branch
+	st = status
+[user]
+	name = crhino
+	email = piraino.chris@gmail.com
