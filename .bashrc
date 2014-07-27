@@ -5,7 +5,6 @@
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
-alias ls='ls -a'
 alias ll='ls -lh'
 
 # Git branch and dirty state in prompt.
