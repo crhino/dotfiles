@@ -6,3 +6,5 @@
 [user]
 	name = crhino
 	email = piraino.chris@gmail.com
+[push]
+	default = simple
