@@ -2,14 +2,23 @@
 
 " Necessary to be cool
 set nocompatible
+filetype off
+
+"Vundle stuff
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" Plugins
+Plugin 'gmarik/Vundle.vim'
+
+" All plugins must be defined before this line
+call vundle#end()
+filetype plugin indent on
+
 
 " Show wtf you are doing
 set showcmd
-
-" Syntax highlighting
-filetype on
-filetype plugin on
-syntax enable
 
 " Duh
 set autoindent
@@ -82,6 +91,5 @@ endfunction
 inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
 set dictionary="/usr/dict/words"
 
-
-filetype plugin indent on
-syntax on
+" Syntax highlighting
+syntax enable
