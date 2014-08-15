@@ -12,3 +12,4 @@ PATH=$PATH:$HOME/bin:$GOPATH/bin:/usr/local/go/bin
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
 
 export PATH
+export GOPATH

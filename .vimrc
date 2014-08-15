@@ -11,6 +11,8 @@ call vundle#begin()
 
 " Plugins
 Plugin 'gmarik/Vundle.vim'
+Plugin 'fatih/vim-go'
+Plugin 'tpope/vim-fugitive'
 
 " All plugins must be defined before this line
 call vundle#end()
