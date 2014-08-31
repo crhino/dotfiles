@@ -8,3 +8,5 @@
 	email = piraino.chris@gmail.com
 [push]
 	default = simple
+[core]
+	editor = vim
