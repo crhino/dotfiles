@@ -15,14 +15,17 @@ Plugin 'fatih/vim-go'
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
+Plugin 'wting/rust.vim'
+Plugin 'bling/vim-airline'
+Plugin 'bling/vim-bufferline'
+Plugin 'chriskempson/base16-vim'
 
 " All plugins must be defined before this line
 call vundle#end()
 filetype plugin indent on
 
-
-" Show wtf you are doing
-set showcmd
+" Enable bufferline
+let g:airline#extensions#bufferline#enabled = 1
 
 " Duh
 set autoindent
@@ -66,7 +69,7 @@ set ignorecase
 set smartcase
 
 " Fuck the ESC key!
-inoremap jj <Esc>
+inoremap jk <Esc>
 
 " Search as you are typing!
 set incsearch
@@ -97,3 +100,7 @@ set dictionary="/usr/dict/words"
 
 " Syntax highlighting
 syntax enable
+
+" Show wtf you are doing
+set showcmd
+set laststatus=2
