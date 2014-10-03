@@ -1,7 +1,7 @@
 # Setup all dot files in home directory.
-ln -s ~/dotfiles/.vimrc ~/.vimrc
-ln -s ~/dotfiles/.git-prompt.sh ~/.git-prompt.sh
-ln -s ~/dotfiles/.gitconfig ~/.gitconfig
-ln -s ~/dotfiles/..bashrc ~/..bashrc
-ln -s ~/dotfiles/.bash_profile ~/.bash_profile
-ln -s ~/dotfiles/.vim ~/.vim
+ln -s $(dirname $0)/.vimrc ~/.vimrc
+ln -s $(dirname $0)/.git-prompt.sh ~/.git-prompt.sh
+ln -s $(dirname $0)/.gitconfig ~/.gitconfig
+ln -s $(dirname $0)/.bashrc ~/.bashrc
+ln -s $(dirname $0)/.bash_profile ~/.bash_profile
+ln -s $(dirname $0)/.vim ~/.vim
