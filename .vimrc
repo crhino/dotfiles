@@ -22,6 +22,7 @@ Plugin 'bling/vim-bufferline'
 Plugin 'chriskempson/base16-vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'vim-ruby/vim-ruby'
 
 " All plugins must be defined before this line
 call vundle#end()
