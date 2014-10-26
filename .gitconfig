@@ -3,8 +3,8 @@
 	ci = commit
 	br = branch
 	st = status
-        lol = log --graph --decorate --pretty=oneline --abbrev-commit
-        lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+        lg = log --graph --decorate --pretty=oneline --abbrev-commit
+        la = log --graph --decorate --pretty=oneline --abbrev-commit --all
 [color]
         branch = auto
         diff = auto
