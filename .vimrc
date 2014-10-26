@@ -23,6 +23,7 @@ Plugin 'chriskempson/base16-vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-ruby/vim-ruby'
+Plugin 'tpope/vim-endwise'
 
 " All plugins must be defined before this line
 call vundle#end()
