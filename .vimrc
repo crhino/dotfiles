@@ -15,6 +15,8 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-abolish'
 Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-unimpaired'
 Plugin 'fatih/vim-go'
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
@@ -26,6 +28,8 @@ Plugin 'chriskempson/base16-vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-ruby/vim-ruby'
+Plugin 'rking/ag.vim'
+Plugin 'taglist.vim'
 
 " All plugins must be defined before this line
 call vundle#end()
@@ -111,6 +115,9 @@ set dictionary="/usr/dict/words"
 
 " Syntax highlighting
 syntax enable
+
+" Use syntax for folding
+set foldmethod=syntax
 
 " Show wtf you are doing
 set showcmd
