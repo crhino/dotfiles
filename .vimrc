@@ -23,20 +23,44 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'wting/rust.vim'
 Plugin 'bling/vim-airline'
-Plugin 'bling/vim-bufferline'
 Plugin 'chriskempson/base16-vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'rking/ag.vim'
+Plugin 'altercation/vim-colors-solarized'
 Plugin 'taglist.vim'
 
 " All plugins must be defined before this line
 call vundle#end()
 filetype plugin indent on
 
-" Enable bufferline
-let g:airline#extensions#bufferline#enabled = 1
+" Syntax highlighting
+syntax enable
+
+" Color Scheme
+set t_Co=16
+set background=dark
+colorscheme solarized
+
+" Airline Config
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+
+" unicode symbols
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.branch = '⎇  '
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.whitespace = 'Ξ'
+
+let g:airline_section_c = '%t'
+let g:airline#extensions#hunks#enabled = 1
+let g:airline#extensions#syntastic#enabled = 1
+let g:airline#extensions#tagbar#enabled = 1
+let g:airline#extensions#branch#enabled = 1
 
 " NerdTree mappings
 noremap \ :NERDTreeToggle<CR>
@@ -52,20 +76,6 @@ set smarttab
 " No 8 character tabs
 set shiftwidth=2
 set softtabstop=2
-
-" Make it use a block cursor
-set cursorline
-if &term =~ '^xterm'
-  " solid underscore
-  let &t_SI .= "\<Esc>[4 q"
-  " solid block
-  let &t_EI .= "\<Esc>[2 q"
-  " 1 or 0 -> blinking block
-  " 3 -> blinking underscore
-  " Recent versions of xterm (282 or above) also support
-  " 5 -> blinking vertical bar
-  " 6 -> solid vertical bar
-endif
 
 " Tab complete commands
 set wildmenu
@@ -113,10 +123,8 @@ endfunction
 inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
 set dictionary="/usr/dict/words"
 
-" Syntax highlighting
-syntax enable
-
 " Use syntax for folding
+set foldlevelstart=99
 set foldmethod=syntax
 
 " Show wtf you are doing
