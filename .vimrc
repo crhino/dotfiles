@@ -40,7 +40,7 @@ syntax enable
 
 " Color Scheme
 set t_Co=16
-set background=dark
+set background=light
 colorscheme solarized
 
 " Airline Config
@@ -130,3 +130,10 @@ set foldmethod=syntax
 " Show wtf you are doing
 set showcmd
 set laststatus=2
+
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
