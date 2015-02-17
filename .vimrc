@@ -73,6 +73,9 @@ set autoindent
 set expandtab
 set smarttab
 
+" Space turns off highlighting
+noremap <Space> :noh<CR>
+
 " No 8 character tabs
 set shiftwidth=2
 set softtabstop=2
@@ -130,6 +133,8 @@ set foldmethod=syntax
 " Show wtf you are doing
 set showcmd
 set laststatus=2
+
+set tags+=/home/chris/workspace/rust/TAGS.vi
 
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
