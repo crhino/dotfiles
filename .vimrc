@@ -69,6 +69,12 @@ noremap \| :NERDTreeFind<CR>
 " Duh
 set autoindent
 
+" Persistent undo
+if has('persistent_undo')
+set undofile
+set undodir=~/.vim/.undo
+endif
+
 " Spaces are your friend
 set expandtab
 set smarttab
@@ -108,6 +114,9 @@ set hlsearch
 " Set off the other paren.
 highlight MatchParen ctermbg=4
 
+set pastetoggle=<F6>
+map <F6> :set invpaste<CR>:set paste?<CR>
+
 "Use TAB to complete when typing words, else inserts TABs as usual.
 ""Uses dictionary and source files to find matching words to complete.
 
@@ -129,6 +138,16 @@ set dictionary="/usr/dict/words"
 " Use syntax for folding
 set foldlevelstart=99
 set foldmethod=syntax
+
+"Searching
+if executable('ack')
+set grepprg=ack\ --nogroup\ --column\ --smart-case\ --nocolor\ --follow\ $*
+set grepformat=%f:%l:%c:%m
+endif
+if executable('ag')
+set grepprg=ag\ --nogroup\ --column\ --smart-case\ --nocolor\ --follow
+set grepformat=%f:%l:%c:%m
+endif
 
 " Show wtf you are doing
 set showcmd
