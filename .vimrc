@@ -40,7 +40,7 @@ syntax enable
 
 " Color Scheme
 set t_Co=16
-set background=light
+set background=dark
 colorscheme solarized
 
 " Airline Config
