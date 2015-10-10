@@ -4,8 +4,10 @@
 set nocompatible
 filetype off
 
-"Vundle stuff
+" Set leader
+let mapleader=";"
 
+"Vundle stuff
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -94,7 +96,9 @@ set wildmode=list:longest,full
 set backspace=2
 
 " How could you go without?
-set number
+" set number
+" Try relative number
+set relativenumber
 
 " Ignore case in search
 set ignorecase
@@ -105,11 +109,15 @@ set smartcase
 " Fuck the ESC key!
 inoremap jk <Esc>
 
-" Search as you are typing!
-set incsearch
+set incsearch " Search as you are typing!
+set hlsearch " Highlight those searches!
 
-" Highlight those searches!
-set hlsearch
+" Backup files
+set backup
+set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set backupskip=/tmp/*,/private/tmp/*
+set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set writebackup
 
 " Set off the other paren.
 highlight MatchParen ctermbg=4
@@ -135,9 +143,14 @@ endfunction
 inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
 set dictionary="/usr/dict/words"
 
+" Movement
+nnoremap j gj
+nnoremap k gk
+
 " Use syntax for folding
 set foldlevelstart=99
 set foldmethod=syntax
+set foldenable
 
 "Searching
 if executable('ack')
@@ -154,6 +167,12 @@ set showcmd
 set laststatus=2
 
 set tags+=/home/chris/workspace/rust/TAGS.vi
+
+" redraw only when needed.
+set lazyredraw
+
+" highlight matching [{()}]
+set showmatch
 
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
