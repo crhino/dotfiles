@@ -96,7 +96,7 @@ set wildmode=list:longest,full
 set backspace=2
 
 " How could you go without?
-" set number
+set number
 " Try relative number
 set relativenumber
 
