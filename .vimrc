@@ -41,9 +41,23 @@ filetype plugin indent on
 syntax enable
 
 " Color Scheme
+function! Toggle_Background()
+  if &background == 'light'
+    set background=dark
+  else
+    set background=light
+  endif
+endfunction
+command! ColorsToggleBG call Toggle_Background()
+map <silent><F4> :ColorsToggleBG<cr>
+
 set t_Co=16
-set background=dark
+set background=light
 colorscheme solarized
+
+" Paste toggle
+set pastetoggle=<F6>
+map <F6> :set invpaste<CR>:set paste?<CR>
 
 " Airline Config
 if !exists('g:airline_symbols')
