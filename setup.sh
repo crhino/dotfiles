@@ -23,6 +23,13 @@ else
   echo "Skipping bash_profile"
 fi
 
+# bashrc
+if [ ! -s $HOME/.bashrc ]; then
+  ln -s $dotfiles_dir/bashrc $HOME/.bashrc
+else
+  echo "Skipping bashrc"
+fi
+
 # tmux.conf
 if [ ! -s $HOME/.tmux.conf ]; then
   ln -s $dotfiles_dir/tmux.conf $HOME/.tmux.conf
