@@ -18,3 +18,5 @@ PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
