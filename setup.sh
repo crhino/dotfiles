@@ -2,7 +2,7 @@
 # Setup all dot files in home directory.
 dotfiles_dir="$(cd $(dirname $0) && pwd)"
 
-# gitpromt
+# gitprompt
 if [ ! -s $HOME/.git-prompt.sh ]; then
   ln -s $dotfiles_dir/git-prompt.sh $HOME/.git-prompt.sh
 else
@@ -39,4 +39,8 @@ fi
 
 if [ ! -d $HOME/.tmux/plugins/tpm ]; then
   git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+fi
+
+if [ ! -d $HOME/.z.sh ]; then
+  wget https://raw.githubusercontent.com/rupa/z/master/z.sh -O $HOME/.z.sh
 fi
